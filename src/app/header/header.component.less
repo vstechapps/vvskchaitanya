@@ -16,30 +16,23 @@
 }
 
 .a{
-    animation: typetext 4s steps(24) 1s 1 normal both,
-    blinkcursor 500ms steps(24) 1s 10 normal;
-    -webkit-animation: typetext 4s steps(24) 1s 1 normal both,
-    blinkcursor 500ms steps(24) 1s 10 normal;
+    animation-name: typetext,blinkcursor;
+    animation-duration:  4s, 500ms;
+    animation-timing-function:  steps(24), steps(24);
+    animation-delay:  0.5s, 0s;
+    animation-iteration-count: 1, 10;
+    animation-direction: normal;
+    animation-fill-mode: both;
 }
+
 
 @keyframes typetext{
     from{width: 10px}
     to{width: 320px}
 }
 
-@-webkit-keyframes typetext{
-    from{width: 10px}
-    to{width: 320px}
-}
-
 @keyframes blinkcursor {
-    from{border-right-color: #252526;}
-    to{border-right-color: white;}
-}
-
-@-webkit-keyframes blinkcursor{
-    from{border-right-color: #252526;}
-    to{border-right-color: white;}
-
+    from{border-right-color: white;}
+    to{border-right-color: #252526;}
 }
 
