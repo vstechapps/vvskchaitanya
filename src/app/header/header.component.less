@@ -1,0 +1,32 @@
+.c{
+    height: 80px;
+    background: #252526;
+    text-align: center;
+    color: white;
+    .t{
+        height:60px;
+        margin: 10px 0px;
+        font-size: 40px;
+        border-right: 10px solid #252526;
+        white-space: nowrap;
+        overflow: hidden; 
+        display: inline-block;
+    }
+
+}
+
+.a{
+    animation: typetext 4s steps(24) 1s 1 normal both,
+    blinkcursor 500ms steps(24) 1s 10 normal;
+}
+
+@keyframes typetext{
+    from{width: 10px}
+    to{width: 320px}
+}
+
+@keyframes blinkcursor {
+    from{border-right-color: #252526;}
+    to{border-right-color: white;}
+}
+

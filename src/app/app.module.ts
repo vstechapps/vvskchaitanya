@@ -4,19 +4,27 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { Profilev1Component } from './profilev1/profilev1.component';
-import { Profilev2Component } from './profilev2/profilev2.component';
 import { TechsComponent } from './techs/techs.component';
 import { TypewriterComponent } from './typewriter/typewriter.component';
+import { AboutComponent } from './about/about.component';
+import { SkillsComponent } from './skills/skills.component';
+import { ExperienceComponent } from './experience/experience.component';
+import { EducationComponent } from './education/education.component';
+import { HeaderComponent } from './header/header.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    Profilev1Component,
-    Profilev2Component,
     TechsComponent,
-    TypewriterComponent
+    TypewriterComponent,
+    AboutComponent,
+    SkillsComponent,
+    ExperienceComponent,
+    EducationComponent,
+    HeaderComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
