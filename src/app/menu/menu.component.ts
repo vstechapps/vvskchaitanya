@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-menu',
@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./menu.component.less']
 })
 export class MenuComponent {
+
+  @Input()
+  isMobile:boolean =false;
+
+  @Output()
+  close = new EventEmitter();
 
 }

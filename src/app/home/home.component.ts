@@ -8,6 +8,7 @@ import { Utility } from '../app-utilt';
 })
 export class HomeComponent {
   isMobile:boolean = Utility.mobileAndTabletCheck();
-  
+  menu: boolean = !this.isMobile;
+
 
 }

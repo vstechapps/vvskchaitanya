@@ -1,2 +1,3 @@
 <app-header></app-header>
-<app-menu *ngIf="!isMobile"></app-menu>
+<app-menu *ngIf="menu" (close)="menu=false" [isMobile]="isMobile"></app-menu>
+<button class="btn btn-default" (click)="menu=true"><i class="material-icons">menu</i></button>

@@ -1,13 +1,12 @@
 <div class="c">
+    <div *ngIf="isMobile" class="text-end"><i class="material-icons pointer mx-2" (click)="close.emit(true)">close</i></div>
     <div class="m">
-        <ul>
-            <li>About</li>
-            <li>Skills</li>
-            <li>Experience</li>
-            <li>Education</li>
-            <li>Projects</li>
-            <li>Presentations</li>
-            <li>ConnectNow</li>
-        </ul>
+            <div>About</div>
+            <div>Skills</div>
+            <div>Experience</div>
+            <div>Education</div>
+            <div>Projects</div>
+            <div>Presentations</div>
+            <div>ConnectNow</div>
     </div>
 </div>
