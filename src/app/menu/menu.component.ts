@@ -7,9 +7,6 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class MenuComponent {
 
-  @Input()
-  isMobile:boolean =false;
-
   @Output()
   close = new EventEmitter();
 

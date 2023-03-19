@@ -12,6 +12,7 @@ import { ExperienceComponent } from './experience/experience.component';
 import { EducationComponent } from './education/education.component';
 import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
+import { ThreedeComponent } from './threede/threede.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MenuComponent } from './menu/menu.component';
     ExperienceComponent,
     EducationComponent,
     HeaderComponent,
-    MenuComponent
+    MenuComponent,
+    ThreedeComponent
   ],
   imports: [
     BrowserModule,
