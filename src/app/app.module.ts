@@ -14,6 +14,7 @@ import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
 import { ThreedeComponent } from './threede/threede.component';
 import { SimplifyComponent } from './simplify/simplify.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { SimplifyComponent } from './simplify/simplify.component';
     HeaderComponent,
     MenuComponent,
     ThreedeComponent,
-    SimplifyComponent
+    SimplifyComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
