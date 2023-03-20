@@ -13,6 +13,7 @@ import { EducationComponent } from './education/education.component';
 import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
 import { ThreedeComponent } from './threede/threede.component';
+import { SimplifyComponent } from './simplify/simplify.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ThreedeComponent } from './threede/threede.component';
     EducationComponent,
     HeaderComponent,
     MenuComponent,
-    ThreedeComponent
+    ThreedeComponent,
+    SimplifyComponent
   ],
   imports: [
     BrowserModule,
