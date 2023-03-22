@@ -16,10 +16,12 @@ export class MenuComponent {
   constructor(public router:Router){
     document.addEventListener("scroll",(event)=>this.checkView(event));
 
+    this.checkView(null);
+
   }
 
   checkView(event:any){
-    var views=["app-profile","app-experience","app-education","app-projects","app-awards","app-connectnow"];
+    var views=["app-profile","app-skills","app-experience","app-education","app-projects","app-awards","app-connectnow"];
     for(var i in views){
       var v=views[i];
       var el = document.getElementsByTagName(v)[0];
@@ -32,8 +34,17 @@ export class MenuComponent {
 
   checkVisible(elm:Element) {
     var rect = elm.getBoundingClientRect();
-    var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+    var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight)-100;
     return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+  }
+
+  focus(view:string){
+    let el:Element = document.getElementsByTagName(view)[0];
+    if(el){
+      var rect = el.getBoundingClientRect();
+      window.scrollTo(rect.left,rect.top-80);
+      this.active=view;
+    }
   }
 
 }

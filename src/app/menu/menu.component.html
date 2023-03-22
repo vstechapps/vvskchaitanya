@@ -1,26 +1,31 @@
 <div class="c">
     <div class="text-end"><i class="material-icons pointer m-2" (click)="close.emit(true)">close</i></div>
     <div class="m">
-            <div class="pointer" [ngClass]="{'active':active=='app-profile'}">
-                <i class="material-icons align-middle mx-2">home</i><span class="align-middle">Home</span>
+            <div class="pointer" [ngClass]="{'active':active=='app-profile'}" (click)="focus('app-profile')">
+                <i class="material-icons align-middle mx-2">home</i>
+                <span class="align-middle">Home</span>
             </div>
-            <div class="pointer" [ngClass]="{'active':active=='app-experience'}">
+            <div class="pointer" [ngClass]="{'active':active=='app-skills'}" (click)="focus('app-skills')">
+                <i class="material-icons align-middle mx-2">equalizer</i>
+                <span class="align-middle">Skills</span>
+            </div>
+            <div class="pointer" [ngClass]="{'active':active=='app-experience'}" (click)="focus('app-experience')">
                 <i class="material-icons align-middle mx-2">trending_up</i>
                 <span class="align-middle">Experience</span>
             </div>
-            <div class="pointer" [ngClass]="{'active':active=='app-education'}">
+            <div class="pointer" [ngClass]="{'active':active=='app-education'}" (click)="focus('app-education')">
                 <i class="material-icons align-middle mx-2">school</i>
                 <span class="align-middle">Education</span>
             </div>
-            <div class="pointer" [ngClass]="{'active':active=='app-projects'}">
+            <div class="pointer" [ngClass]="{'active':active=='app-projects'}" (click)="focus('app-projects')">
                 <i class="material-icons align-middle mx-2">work_history</i>
                 <span class="align-middle">Projects</span>
             </div>
-            <div class="pointer" [ngClass]="{'active':active=='app-awards'}">
+            <div class="pointer" [ngClass]="{'active':active=='app-awards'}" (click)="focus('app-awards')">
                 <i class="material-icons  align-middle mx-2">workspace_premium</i>
                 <span class="align-middle">Awards</span>
             </div>
-            <div class="pointer" [ngClass]="{'active':active=='app-connectnow'}">
+            <div class="pointer" [ngClass]="{'active':active=='app-connectnow'}" (click)="focus('app-connectnow')">
                 <i class="material-icons  align-middle mx-2">forum</i>
                 <span class="align-middle">Connect Now</span>
             </div>
