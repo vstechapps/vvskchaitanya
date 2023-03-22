@@ -16,7 +16,7 @@ export class MenuComponent {
   ignoreNextScrollEvent = false;
 
   constructor(public router:Router){
-    document.addEventListener("scroll",(event)=>this.checkView(event));
+    document.addEventListener("scroll",(event)=>this.checkView(event),false);
 
     this.checkView(null);
 
