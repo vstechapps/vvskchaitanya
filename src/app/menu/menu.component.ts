@@ -13,6 +13,8 @@ export class MenuComponent {
 
   active:string="";
 
+  ignoreNextScrollEvent = false;
+
   constructor(public router:Router){
     document.addEventListener("scroll",(event)=>this.checkView(event));
 
@@ -21,6 +23,10 @@ export class MenuComponent {
   }
 
   checkView(event:any){
+    if(this.ignoreNextScrollEvent){
+      this.ignoreNextScrollEvent=false;
+      return;
+    }
     var views=["app-profile","app-skills","app-experience","app-education","app-projects","app-awards","app-connectnow"];
     for(var i in views){
       var v=views[i];
@@ -42,6 +48,7 @@ export class MenuComponent {
     let el:Element = document.getElementsByTagName(view)[0];
     if(el){
       var rect = el.getBoundingClientRect();
+      this.ignoreNextScrollEvent=true;
       window.scrollTo(rect.left,rect.top-80);
       this.active=view;
     }
