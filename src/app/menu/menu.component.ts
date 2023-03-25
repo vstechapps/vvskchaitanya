@@ -33,23 +33,29 @@ export class MenuComponent {
       var el = document.getElementsByTagName(v)[0];
       if(el && this.checkVisible(el)){
         this.active=v;
-        break;
       }
     }
   }
 
   checkVisible(elm:Element) {
     var rect = elm.getBoundingClientRect();
-    var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight)-100;
-    return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+    var top = rect.top;
+    var viewHeight = window.innerHeight /2;
+    return top < viewHeight;
   }
 
   focus(view:string){
     let el:Element = document.getElementsByTagName(view)[0];
     if(el){
-      var rect = el.getBoundingClientRect();
-      this.ignoreNextScrollEvent=true;
-      window.scrollTo(rect.left,rect.top-80);
+      var rect= el.getBoundingClientRect();
+      var top = rect.top;
+      var pageTop = window.visualViewport?.pageTop
+      if(pageTop){
+        top+=pageTop;
+      }
+      //el.scrollIntoView();
+      window.scrollTo(rect.left,top-80);
+      
       this.active=view;
     }
   }
