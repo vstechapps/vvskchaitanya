@@ -1,15 +1,16 @@
 <div class="row m-0 px-2 r text-center">
     <div class="col-12 text-center">
-        Awards & Certifications
+        Awards & Recognition
     </div>
 </div>
 <div class="container">
-    <div class="row mt-2">
+    <div class="row mt-4">
         <div *ngFor="let c of awards" class="col-md-4 col-sm-6 col-xs-12 m-0 px-2">
-            <div class="card shadow">
-                <iframe [src]="c.link" style="width: 200px; height: 200px;" frameborder="0" scrolling="no">
-                    <p>{{c.name}}</p>
-                </iframe>
+            <div class="card shadow text-center">
+                <div>
+                    <embed [type]="c.t" [src]="c.l" style="width: 200px; height: 200px;">
+                </div>
+                <h6 class="link pointer" (click)="open(c)" style="">{{c.name}}</h6>
             </div>
         </div>
     </div>
