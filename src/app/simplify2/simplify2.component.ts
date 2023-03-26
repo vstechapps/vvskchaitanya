@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-simplify2',
@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./simplify2.component.less']
 })
 export class Simplify2Component {
+
+  @Input()
+  text:string = "";
 
 }

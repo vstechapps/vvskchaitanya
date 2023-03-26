@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class CarouselComponent {
 
+  texts=[
+    "Write - Event Driven Functions",
+    "Build - Reusable Components",
+    "Choose - Scalable Architecture",
+    "Design - Reliable Systems",
+    "Deploy - Cloud Ready Apps"
+  ];
+
 }
