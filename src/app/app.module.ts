@@ -15,6 +15,9 @@ import { ThreedeComponent } from './threede/threede.component';
 import { SimplifyComponent } from './simplify/simplify.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AwardsComponent } from './awards/awards.component';
+import { CarouselComponent } from './carousel/carousel.component';
+import { Simplify2Component } from './simplify2/simplify2.component';
+import { Simplify3Component } from './simplify3/simplify3.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { AwardsComponent } from './awards/awards.component';
     ThreedeComponent,
     SimplifyComponent,
     ProfileComponent,
-    AwardsComponent
+    AwardsComponent,
+    CarouselComponent,
+    Simplify2Component,
+    Simplify3Component
   ],
   imports: [
     BrowserModule,
