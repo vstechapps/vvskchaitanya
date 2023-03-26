@@ -17,7 +17,6 @@ import { ProfileComponent } from './profile/profile.component';
 import { AwardsComponent } from './awards/awards.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { Simplify2Component } from './simplify2/simplify2.component';
-import { Simplify3Component } from './simplify3/simplify3.component';
 
 @NgModule({
   declarations: [
@@ -35,8 +34,7 @@ import { Simplify3Component } from './simplify3/simplify3.component';
     ProfileComponent,
     AwardsComponent,
     CarouselComponent,
-    Simplify2Component,
-    Simplify3Component
+    Simplify2Component
   ],
   imports: [
     BrowserModule,
