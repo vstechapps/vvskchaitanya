@@ -17,6 +17,9 @@ import { ProfileComponent } from './profile/profile.component';
 import { AwardsComponent } from './awards/awards.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { Simplify2Component } from './simplify2/simplify2.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { ResumeComponent } from './resume/resume.component';
+import { LibraryComponent } from './library/library.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { Simplify2Component } from './simplify2/simplify2.component';
     ProfileComponent,
     AwardsComponent,
     CarouselComponent,
-    Simplify2Component
+    Simplify2Component,
+    ProjectsComponent,
+    ResumeComponent,
+    LibraryComponent
   ],
   imports: [
     BrowserModule,
