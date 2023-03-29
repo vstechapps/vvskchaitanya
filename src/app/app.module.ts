@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +21,8 @@ import { Simplify2Component } from './simplify2/simplify2.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ResumeComponent } from './resume/resume.component';
 import { LibraryComponent } from './library/library.component';
+import { StoreComponent } from './store/store.component';
+import { ConnectComponent } from './connect/connect.component';
 
 @NgModule({
   declarations: [
@@ -40,11 +43,14 @@ import { LibraryComponent } from './library/library.component';
     Simplify2Component,
     ProjectsComponent,
     ResumeComponent,
-    LibraryComponent
+    LibraryComponent,
+    StoreComponent,
+    ConnectComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
