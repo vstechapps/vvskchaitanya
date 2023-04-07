@@ -6,11 +6,11 @@
 <div class="container">
     <div class="row mt-4">
         <div *ngFor="let c of awards" class="col-md-4 col-sm-6 col-xs-12 m-0 p-2">
-            <div class="card shadow text-center">
+            <div class="card shadow text-center pointer" (click)="open(c)">
                 <div>
                     <embed [type]="c.t" [src]="c.l" style="width: 200px; height: 200px;">
                 </div>
-                <h6 class="link pointer" (click)="open(c)" style="">{{c.name}}</h6>
+                <h6 class="link pointer">{{c.name}}</h6>
             </div>
         </div>
     </div>
