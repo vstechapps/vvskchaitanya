@@ -10,7 +10,7 @@ export class StoreComponent {
   apps=[{
     name:"IAM",
     about:"Identity and Access Management",
-    text:"Centralized Repository for User Management. Authenticate / Authorize users and maintain trust between users and enterprise resources. Manage User roles, permissions and business policies for complete organization."
+    text:"Centralized Repository for User Management. Authenticate / Authorize users and maintain trust between users and applications. Manage User roles, permissions and business policies. Control access levels for the users."
   },{
     name:"ECM",
     about:"Enterprise Content Management",
@@ -38,7 +38,7 @@ export class StoreComponent {
   },{
     name:"QSA",
     about:"Quick Start App",
-    text:"Quickly start creating a web app without any code. Create your design and easily turn it into working application. Follows No Code, Low Code Principles. Reduces Development efforts and Increase Productivity"
+    text:"Quickly start creating a web / mobile app without any code. Create your design and easily turn it into working application. Follows No Code Low Code Principles. Reduce Development efforts and help us to quickly launch app into market"
   },{
     name:"AQA",
     about:"Automation of Quality Assurance",
