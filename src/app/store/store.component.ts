@@ -50,7 +50,11 @@ export class StoreComponent {
   },{
     name:"FHD",
     about:"Financial Health Dashboard",
-    text:"Visualize and Track Sales Reports, Revenue Charts in Realtime. Apply Business Intelligence & Data Analytics on reported data. Take right business decisions to improve long term financial health."
+    text:"Visualize and Track Sales Reports, Revenue Charts in Realtime. Apply Business Intelligence & Data Analytics on reported data. Take right business decisions to improve long term financial health of business."
+  },{
+    name:"FHD",
+    about:"Financial Health Dashboard",
+    text:"Visualize and Track Sales Reports, Revenue Charts in Realtime. Apply Business Intelligence & Data Analytics on reported data. Take right business decisions to improve long term financial health of business."
   }]
 
 
