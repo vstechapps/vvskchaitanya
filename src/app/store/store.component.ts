@@ -36,6 +36,10 @@ export class StoreComponent {
     about:"Customer Relationship Management",
     text:"Identify leads, Build Marketing Teams to showcase business products, Turn Leads into Prospects and then into Clients. Track Product sales and Provide efficient customer support. Get feedback from clients and build new products with updated features"
   },{
+    name:"SRT",
+    about:"Service Request Tracker",
+    text:"Easily create tickets for issue / incident / service requests, get it assigned to responsible team, define service level agreements. Notify status to concerned users. Collaborate and Track down to resolution."
+  },{
     name:"QSA",
     about:"Quick Start App",
     text:"Quickly start creating a web / mobile app without any code. Create your design and easily turn it into working application. Follows No Code Low Code Principles. Reduce Development efforts and help us to quickly launch app into market"
@@ -47,10 +51,6 @@ export class StoreComponent {
     name:"BETA",
     about:"Business Expense Tracking and Approval",
     text:"Track and Supervise your business expenses spent by  us/ our staff / employees / other team members. Get the expense bills uploaded into system, Do Validate and Approve. Eliminate the chances of spending unnecessary expenses"
-  },{
-    name:"FHD",
-    about:"Financial Health Dashboard",
-    text:"Visualize and Track Sales Reports, Revenue Charts in Realtime. Apply Business Intelligence & Data Analytics on reported data. Take right business decisions to improve long term financial health of business."
   },{
     name:"FHD",
     about:"Financial Health Dashboard",
