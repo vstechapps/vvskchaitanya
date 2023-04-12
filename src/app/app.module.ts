@@ -23,6 +23,7 @@ import { ResumeComponent } from './resume/resume.component';
 import { LibraryComponent } from './library/library.component';
 import { StoreComponent } from './store/store.component';
 import { ConnectComponent } from './connect/connect.component';
+import { BookComponent } from './book/book.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { ConnectComponent } from './connect/connect.component';
     ResumeComponent,
     LibraryComponent,
     StoreComponent,
-    ConnectComponent
+    ConnectComponent,
+    BookComponent
   ],
   imports: [
     BrowserModule,

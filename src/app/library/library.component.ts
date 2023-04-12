@@ -5,49 +5,22 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './library.component.html',
   styleUrls: ['./library.component.less']
 })
-export class LibraryComponent implements OnInit{
+export class LibraryComponent{
 
-  pages: HTMLCollectionOf<Element>;
+  book:any=null;
 
-  constructor(){
-    this.pages = document.getElementsByClassName('page');
+  books=[{
+    title:"Book 1",
+    front:"<div>Book 1</div>"
+  },{
+    title:"Book 2",
+    front:"<div>Book 2</div>"
+  },{
+    title:"Book 3",
+    front:"<div>Book 3</div>"
+  },];
+
+  open(b:any){
+    this.book=b;
   }
-
-  ngOnInit(): void {
-    this.load();
-  }
-
-  load(){
-    
-    for(var i = 0; i < this.pages.length; i++)
-    {
-      let page:any = this.pages[i];
-      if (i % 2 === 0)
-        {
-          page.style.zIndex = (this.pages.length - i);
-        }
-    }
-    let a=this;
-    document.addEventListener('DOMContentLoaded', function(){
-      for(var i = 0; i < a.pages.length; i++)
-        {
-          let p:any = a.pages[i];
-          p.pageNum = i + 1;
-          p.onclick=function()
-            {
-              if (this.pageNum % 2 === 0)
-                {
-                  this.classList.remove('flipped');
-                  this.previousElementSibling.classList.remove('flipped');
-                }
-              else
-                {
-                  this.classList.add('flipped');
-                  this.nextElementSibling.classList.add('flipped');
-                }
-             }
-          }
-    })
-  }
-
 }
