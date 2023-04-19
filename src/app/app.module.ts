@@ -24,6 +24,7 @@ import { LibraryComponent } from './library/library.component';
 import { StoreComponent } from './store/store.component';
 import { ConnectComponent } from './connect/connect.component';
 import { BookComponent } from './book/book.component';
+import { Library1Component } from './library1/library1.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { BookComponent } from './book/book.component';
     LibraryComponent,
     StoreComponent,
     ConnectComponent,
-    BookComponent
+    BookComponent,
+    Library1Component
   ],
   imports: [
     BrowserModule,
