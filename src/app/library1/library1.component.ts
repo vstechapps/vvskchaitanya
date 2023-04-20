@@ -11,6 +11,10 @@ export class Library1Component {
     name:"Active Directory Federation Services",
     about:"Integration of AD FS and OAuth",
     link:"assets/files/adfs-oauth.pdf"
+  },{
+    name:"Spring Security",
+    about:"Spring Security and OAuth 2.0",
+    link:"assets/files/spring-security.pdf"
   }];
 
   open(b:any){

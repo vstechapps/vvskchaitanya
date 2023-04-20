@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class ProjectsComponent {
 
+  linkEnabled=false;
+
   projects=[{
     name:"Advice Connect",
     about:"Financial Planning Application",
