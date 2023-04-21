@@ -9,9 +9,6 @@ import { getAnalytics, logEvent } from "firebase/analytics";
 export class FirestoreService {
   app = initializeApp(firebaseConfig);
   analytics = getAnalytics(this.app);
-  msg = {
-    url:window.location.href
-  }
 
   constructor() { }
 
@@ -26,7 +23,7 @@ export class FirestoreService {
       message.data=data;
     }
     console.log("Sending Event to Analytics: ",message);
-    logEvent(this.analytics, message);
+    logEvent(this.analytics, event, message);
   }
 
   
