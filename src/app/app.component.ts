@@ -9,6 +9,6 @@ import { Events, FirestoreService } from './firestore.service';
 export class AppComponent {
   
   constructor(private firestore:FirestoreService){
-    this.firestore.log(Events.NAVIGATION_EVENT);
+    this.firestore.log(Events.PAGE_VIEW);
   }
 }

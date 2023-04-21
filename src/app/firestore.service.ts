@@ -30,9 +30,9 @@ export class FirestoreService {
 }
 
 export enum Events{
-  NAVIGATION_EVENT="NAVIGATION_EVENT",
-  CLICK_EVENT="CLICK_EVENT",
-  INPUT_EVENT="INPUT_EVENT"
+  PAGE_VIEW="PAGE_VIEW",
+  LOGIN="login",
+  SIGN_UP="sign_up"
 
 }
 
