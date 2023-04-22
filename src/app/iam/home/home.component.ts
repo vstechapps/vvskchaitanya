@@ -9,27 +9,41 @@ export class HomeComponent {
 
   navs=[{
     title:"V.V.S.K",
-    path:""
+    route:""
   },{
     title:"IAM",
-    path:"iam"
+    path:"iam",
+    route:"/iam"
   }];
   
 
   cards=[{
-    name:"Manage Domains"
+    name:"Manage Domains",
+    icon:"public",
+    role:"SUPER_ADMIN"
   },{
-    name:"Manage Users"
+    name:"Manage Users",
+    icon:"group",
+    role:"SUPER_ADMIN"
   },{
-    name:"Manage Apps"
+    name:"Manage Apps",
+    icon:"web",
+    role:"SUPER_ADMIN"
   },{
-    name:"Manage Permissions"
+    name:"Manage Permissions",
+    icon:"lock"
   },{
-    name:"User Permissions"
+    name:"My Profile",
+    icon:"person"
   },{
-    name:"Request Access"
+    name:"Access Request",
+    icon:"key"
   },{
-    name:"Request Change"
+    name:"Change Request",
+    icon:"article"
+  },{
+    name:"Request History",
+    icon:"history"
   }]
 
   constructor(){
