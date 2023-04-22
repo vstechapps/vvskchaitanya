@@ -10,6 +10,7 @@ export class StoreComponent {
   apps=[{
     name:"IAM",
     about:"Identity and Access Management",
+    route:"iam",
     text:"Centralized Repository for User Management. Authenticate / Authorize users and maintain trust between users and applications. Manage User roles, permissions and business policies. Control access levels for the users."
   },{
     name:"ECM",

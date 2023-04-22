@@ -1,0 +1,16 @@
+<div class="row head r m-0 px-4 fs-1">
+    <div class="col-12 pt-2">
+        <span *ngFor="let n of navs;index as i"><span class="pointer">{{n.title}}</span> <i *ngIf="i!=navs.length-1" class="material-icons mx-1 fs-1 align-middle">chevron_right</i></span>
+    </div>
+</div>
+<div class="container">
+    <div class="row mt-3">
+        <div class="col-md-4 col-sm-6 col-xs-12 m-0 p-2 h-100 pointer" *ngFor="let c of cards">
+            <div class="card shadow">
+                <div class="card-body">
+                    {{c.name}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
