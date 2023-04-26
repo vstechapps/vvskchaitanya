@@ -18,6 +18,18 @@ export class HomeComponent {
   
 
   cards=[{
+    name:"My Profile",
+    icon:"person"
+  },{
+    name:"Access Request",
+    icon:"key"
+  },{
+    name:"Change Request",
+    icon:"article"
+  },{
+    name:"Request History",
+    icon:"history"
+  },{
     name:"Manage Domains",
     icon:"public",
     role:"SUPER_ADMIN"
@@ -32,18 +44,6 @@ export class HomeComponent {
   },{
     name:"Manage Permissions",
     icon:"lock"
-  },{
-    name:"My Profile",
-    icon:"person"
-  },{
-    name:"Access Request",
-    icon:"key"
-  },{
-    name:"Change Request",
-    icon:"article"
-  },{
-    name:"Request History",
-    icon:"history"
   }]
 
   constructor(){

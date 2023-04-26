@@ -53,10 +53,11 @@ export class MenuComponent {
       if(pageTop){
         top+=pageTop;
       }
-      //el.scrollIntoView();
+      
       window.scrollTo(rect.left,top-80);
       
       this.active=view;
+      setTimeout(()=>this.close.emit(),100);
     }
   }
 
