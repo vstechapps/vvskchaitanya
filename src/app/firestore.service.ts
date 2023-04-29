@@ -12,6 +12,10 @@ export class FirestoreService {
 
   constructor() { }
 
+  logIn(){
+    
+  }
+
   log(event:string,data=null){
     let message:any={
       url:window.location.href,

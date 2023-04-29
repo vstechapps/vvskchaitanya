@@ -35,7 +35,7 @@ export class ProjectsComponent {
     text:"Integrated Active Directory Federation Services for all corporate applications to have single sign on for multiple apps using OAuth 2.0 & JWT Validation and created single space of Identity and Access management"
   },{
     name:"DMS - Alfresco",
-    about:"Documnent Management System using ECM",
+    about:"Document Management System using ECM",
     text:"DMS is built on the open source Alfresco tool for managing the business documents online. Customized the Alfresco CMS according to the Biz requirements Implemented the automated mailing system and workflow to track the status between management team and users. Developed Alfresco Webscripts and Alfresco Share UI pages"
   }]
 
