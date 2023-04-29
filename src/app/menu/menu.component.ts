@@ -27,7 +27,7 @@ export class MenuComponent {
       this.ignoreNextScrollEvent=false;
       return;
     }
-    var views=["app-profile","app-skills","app-experience","app-awards","app-projects","app-connect","app-store"];
+    var views=["app-profile","app-skills","app-experience","app-awards","app-projects","app-library1","app-store"];
     for(var i in views){
       var v=views[i];
       var el = document.getElementsByTagName(v)[0];

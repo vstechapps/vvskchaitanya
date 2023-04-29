@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./connect.component.less']
 })
 export class ConnectComponent implements OnInit {
+
+  chat:boolean=false;
   
   chatLog = document.getElementById('chat-log');
   inputField = document.getElementById('input-field');
