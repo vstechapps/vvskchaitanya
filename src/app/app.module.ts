@@ -25,6 +25,8 @@ import { StoreComponent } from './store/store.component';
 import { ConnectComponent } from './connect/connect.component';
 import { BookComponent } from './book/book.component';
 import { Library1Component } from './library1/library1.component';
+import { ImpulseComponent } from './impulse/impulse.component';
+import { ImpulseCardComponent } from './impulse-card/impulse-card.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,9 @@ import { Library1Component } from './library1/library1.component';
     StoreComponent,
     ConnectComponent,
     BookComponent,
-    Library1Component
+    Library1Component,
+    ImpulseComponent,
+    ImpulseCardComponent
   ],
   imports: [
     BrowserModule,
