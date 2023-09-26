@@ -7,7 +7,7 @@
     <div class="row mt-3">
         <div class="col-md-4 col-sm-6 col-xs-12 m-0 p-2 h-100 pointer" *ngFor="let c of cards">
             <div class="card shadow">
-                <div class="card-body">
+                <div class="card-body" (click)="demo()">
                     <div class="row">
                         <div class="d-flex flex-column align-items-center justify-content-center">
                             <div><i class="material-icons ic">{{c.icon}}</i></div>

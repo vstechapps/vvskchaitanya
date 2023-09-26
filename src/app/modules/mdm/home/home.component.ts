@@ -32,5 +32,11 @@ export class HomeComponent {
     role:"SUPER_ADMIN"
   }]
 
+  
+
+  demo(){
+    window.postMessage("DemoMessage");
+  }
+
 
 }

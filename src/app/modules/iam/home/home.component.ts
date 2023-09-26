@@ -50,5 +50,9 @@ export class HomeComponent {
 
   }
 
+  demo(){
+    window.postMessage("DemoMessage");
+  }
+
 
 }
