@@ -61,7 +61,7 @@ export class StoreComponent {
     name:"BETA",
     about:"Business Expense Tracking and Approval",
     route:"beta",
-    text:"Track and Supervise your business expenses spent by  us/ our staff / employees / other team members. Get the expense bills uploaded into system, Do Validate and Approve. Eliminate the chances of spending unnecessary expenses"
+    text:"Track and Supervise business expenses spent by us / our staff / employees / other team members. Get the expense bills uploaded into system, Do Validate and Approve. Eliminate the chances of spending unnecessary expenses"
   },{
     name:"FHD",
     about:"Financial Health Dashboard",
