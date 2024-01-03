@@ -8,6 +8,14 @@ import { Component } from '@angular/core';
 export class Library1Component {
 
   books=[{
+      name:"Java Build Tools",
+      about:"Learn about Maven, Gradle",
+      link:"assets/files/java-build-tools.pdf"
+    },{
+      name:"Understand Inteface",
+      about:"Definition of Interface and examples",
+      link:"assets/files/interface.pdf"
+    },{
     name:"Active Directory Federation Services",
     about:"Integration of AD FS and OAuth",
     link:"assets/files/adfs-oauth.pdf"
