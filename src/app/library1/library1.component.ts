@@ -8,6 +8,14 @@ import { Component } from '@angular/core';
 export class Library1Component {
 
   books=[{
+    name:"Java Fullstack Development",
+    about:"Fullstack Intro and Demand in market",
+    link:"assets/files/java-fullstack-dev-intro.pdf"
+  },{
+    name:"Spring Boot Intro",
+    about:"Hands on development of spring app",
+    link:"assets/files/spring-boot-intro.pdf"
+  },{
       name:"Java Build Tools",
       about:"Learn about Maven, Gradle",
       link:"assets/files/java-build-tools.pdf"
@@ -26,6 +34,8 @@ export class Library1Component {
   }];
 
   open(b:any){
-    window.open(window.location.href+"/"+b.link,"_blank");
+    var link="https://impulse.vvsk.in/"+b.link;
+    link = "https://impulse.vvsk.in/pdfviewer?url="+link;
+    window.open(link,"_blank");
   }
 }
