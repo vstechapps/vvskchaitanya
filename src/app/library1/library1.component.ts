@@ -9,18 +9,18 @@ export class Library1Component {
 
   books=[{
     name:"Java Fullstack Development",
-    about:"Fullstack Intro and Demand in market",
+    about:"Get Started with Fullstack",
     link:"assets/files/java-fullstack-dev-intro.pdf"
   },{
     name:"Spring Boot Intro",
-    about:"Hands on development of spring app",
+    about:"App development using Spring Boot",
     link:"assets/files/spring-boot-intro.pdf"
   },{
       name:"Java Build Tools",
       about:"Learn about Maven, Gradle",
       link:"assets/files/java-build-tools.pdf"
     },{
-      name:"Understand Inteface",
+      name:"Understand Interface",
       about:"Definition of Interface and examples",
       link:"assets/files/interface.pdf"
     },{
