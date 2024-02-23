@@ -15,13 +15,13 @@ export class CarouselComponent {
     "Deploy - Cloud Ready Apps",
     "Enable - Zero Trust Security",
     "Write - Event Driven Functions",
-    "Avoid - Tight Coupling",
+    "Avoid - Tight Coupling Systems",
     "Apply - S.O.L.I.D Principles",
     "Write - Event Driven Functions",
     "Include - 12 Factor Methodology",
     "Create - Config Driven Applications",
     "Start - No Code - Low Code",
-    "Pair with Github Copilot & ChatGPT",
+    "Pair - Github Copilot & ChatGPT",
     "Expect - Architecture Convergence",
   ];
 

@@ -16,17 +16,17 @@ export class StoreComponent {
     name:"ECM",
     about:"Enterprise Content Management",
     route:"ecm",
-    text:"Create Content, Review, Collaborate across Teams, Publish content to public. In-built support of ready to use content types which are trending out. Use Content Modelling, Customize models as per business rules"
+    text:"Create Content, Review, Collaborate across Teams, Publish content. In-built support of ready to use content types. Use Content Modelling, Access Controls, Add Metadata, Write Business rules, Elastic Storage and many other features"
   },{
     name:"BPM",
     about:"Business Process Management",
     route:"bpm",
-    text:"Easily create automated workflows required for our business process. Send out Alerts / Reminders to employees / managers / clients based on business rules. Eliminate manual supervision of business process"
+    text:"Easily automate and business process. Create Tasks / Workflows. Send out Alerts / Reminders to employees / managers / clients, Automate repetitive tasks. Eliminate manual supervision. Ensure Efficiency and increase Productivity"
   },{
     name:"MDM",
     about:"Master Data Management",
     route:"mdm",
-    text:"Establish and Maintain a Master Database as single source of truth for your business data. Write Once Read Many. Do RealTime updates according to market situtations. Easily create Secure API and integrate with other business apps"
+    text:"Establish and Maintain Master Database as single source of truth for your business data. Write Once Read Many. Do RealTime updates according to market situtations. Easily create Secure API and integrate with other business apps"
   },{
     name:"APM",
     about:"Agile Project Management",

@@ -9,7 +9,7 @@ export class Library1Component {
 
   books=[{
     name:"Java Fullstack Development",
-    about:"Get Started with Fullstack",
+    about:"Get started with Fullstack",
     link:"assets/files/java-fullstack-dev-intro.pdf"
   },{
     name:"Spring Boot Intro",
