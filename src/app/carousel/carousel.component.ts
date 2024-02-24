@@ -17,12 +17,14 @@ export class CarouselComponent {
     "Write - Event Driven Functions",
     "Avoid - Tight Coupling Systems",
     "Apply - S.O.L.I.D Principles",
-    "Write - Event Driven Functions",
     "Include - 12 Factor Methodology",
     "Create - Config Driven Applications",
     "Start - No Code - Low Code",
     "Pair - Github Copilot & ChatGPT",
     "Expect - Architecture Convergence",
+    "Work OS - Enterprise Ready Apps",
+    "Openfin - Workspace for FinTech Apps",
+    "Monday.com - Complete Work Management Suite",
   ];
 
 }
