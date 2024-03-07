@@ -10,7 +10,7 @@
         </div>
         <div class="modal-body">
             <div id="chat-container">
-                <div id="chat-log"></div>
+                <div id="chat-log" [innerHTML]="chatLog"></div>
                 <div id="user-input">
                     <input type="text" id="input-field" [(ngModel)]="input" placeholder="Hello World!!...">
                     <button id="send-button" (click)="send()">Send</button>

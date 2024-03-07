@@ -9,9 +9,7 @@ export class ConnectComponent implements OnInit {
 
   chat:boolean=false;
   
-  chatLog = document.getElementById('chat-log');
-  inputField = document.getElementById('input-field');
-  submitButton = document.getElementById('submit-button');
+  chatLog:string = "";
   input="";
 
   constructor(){
@@ -19,49 +17,43 @@ export class ConnectComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.chatLog = document.getElementById('chat-log');
-    this.inputField = document.getElementById('input-field');
-    this.submitButton = document.getElementById('submit-button');
-    var a = this;
-    if(this.inputField){
-      this.inputField.addEventListener('keydown', function(event) {
-        if (event.code === 'Enter') {
-          event.preventDefault(); // Prevent form submission
-          a.send();
-        }
-      });
-    }
     
   }
 
   send() {
     let userInput = this.input;
+    console.log("User Input:", userInput);
     if (userInput.trim() !== '') {
-      let botResponse = this.getBotResponse(userInput.toLowerCase());
       this.addMessage('user', userInput);
-      this.input='';
-      this.addMessage('bot', botResponse);
+      let botResponse = this.getBotResponse(userInput.toLowerCase());
+      console.log("Bot Response: ",botResponse);
+      setTimeout((a:any)=>{a.addMessage('bot', botResponse);},500,this);
+      this.input="";
     }
   }
   
   addMessage(sender:string, message:string) {
-    let messageContainer = document.createElement('div');
-    messageContainer.classList.add(`${sender}-message`);
-    messageContainer.innerHTML = message;
-    if(this.chatLog){
-      this.chatLog.appendChild(messageContainer);
-      this.chatLog.scrollTop = this.chatLog.scrollHeight;
-
+    let m = "<div class=\""+sender+"-message"
+    if(sender=="bot"){
+      m+=" show\">"+message+"</div>";
+    }else{
+      m+="\">"+message+"</div>";
     }
-    if(sender=='bot'){
-      messageContainer.classList.add(`show`);
-    }
+    this.chatLog += m;
+    setTimeout((a:any)=>{a.adjustHeight();},300,this);
     
+  }
+
+  adjustHeight(){
+    let a = document.getElementById("chat-log");
+    if(a){
+      a.scrollTop = a.scrollHeight;
+    }
   }
   
   getBotResponse(input:string) {
     switch(true) {
-      case input.includes('hello'):
+      case input.includes('hello') || input.includes('hi'):
         return 'Hello, how can I help you today?';
       case input.includes('how are you'):
         return 'I am doing well, thank you for asking!';
