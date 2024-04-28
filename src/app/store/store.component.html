@@ -5,7 +5,7 @@
 </div>
 <div class="container">
     <div class="row mt-3">
-        <div class="col-md-4 col-sm-6 col-xs-12 m-0 p-2 h-100" *ngFor="let p of apps">
+        <div class="col-md-4 col-sm-6 col-xs-12 m-0 p-2 h-100" *ngFor="let p of apps; index as i">
             <div class="card shadow">
                 <div class="card-body">
                     <h5 class="card-title fs-3 fw-bold pointer">{{p.name}}<i [routerLink]="p.route" class="material-icons align-middle mx-2 pointer float-end">open_in_new</i></h5>
@@ -14,7 +14,7 @@
                         {{p.text}}
                     </p>
                     <div style="text-align:center;" *ngIf="p.apps && p.apps.length>0">
-                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" [attr.data-bs-interval]="[2250,2500,2750,3000][Math.floor(Math.random() * 4)]">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" [attr.data-bs-interval]="2000+(i*250)">
                             <div class="carousel-inner" >
                               <div class="carousel-item active">
                                 <span style="font-weight: 700;">{{p.apps[0]}}</span>
