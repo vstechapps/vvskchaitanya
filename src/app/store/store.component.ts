@@ -44,7 +44,7 @@ export class StoreComponent {
     about:"Enterprise Resource Planning",
     route:"erp",
     text:"Estimate Budgets for inventory, human resources, workplace maintenance, administration and operations costs. Compare with market and plan the budget to support business and technology operations in cost effective way",
-    apps:[]
+    apps:["Oracle NetSuite","Microsoft Dynamics 365","SAP Business One","Infor","Workday","ERPNext"]
   },{
     name:"CRM",
     about:"Customer Relationship Management",
