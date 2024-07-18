@@ -1,3 +1,4 @@
 {
-    "repos":["java-fullstack","master-spring-boot","spring-security","learn-sql","java-mysql","ui-basics","angular-frontend"]
+    "repos":["java-fullstack","master-spring-boot","spring-security","learn-sql","java-mysql","ui-basics","angular-frontend"],
+    "projects":false
 }

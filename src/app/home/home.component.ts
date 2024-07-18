@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Utility } from '../app-utilt';
+import { ConfigService } from '../config.service';
 
 @Component({
   selector: 'app-home',
@@ -9,6 +10,10 @@ import { Utility } from '../app-utilt';
 export class HomeComponent {
   isMobile:boolean = Utility.mobileAndTabletCheck();
   menu: boolean = !this.isMobile;
+
+  constructor(public config:ConfigService){
+
+  }
 
 
 }
