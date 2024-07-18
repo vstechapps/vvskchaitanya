@@ -28,6 +28,8 @@ import { Library1Component } from './library1/library1.component';
 import { ImpulseComponent } from './impulse/impulse.component';
 import { ImpulseCardComponent } from './impulse-card/impulse-card.component';
 import { GameComponent } from './game/game.component';
+import { ReposComponent } from './repos/repos.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -55,12 +57,14 @@ import { GameComponent } from './game/game.component';
     Library1Component,
     ImpulseComponent,
     ImpulseCardComponent,
-    GameComponent
+    GameComponent,
+    ReposComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
