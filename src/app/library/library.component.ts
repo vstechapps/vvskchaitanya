@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-library',
-    templateUrl: './library.component.html',
-    styleUrls: ['./library.component.less'],
-    standalone: false
+  selector: 'app-library',
+  templateUrl: './library.component.html',
+  styleUrls: ['./library.component.less'],
+  standalone: false
 })
 export class LibraryComponent {
 
@@ -31,8 +31,6 @@ export class LibraryComponent {
   }];
 
   open(b: any) {
-    var link = "https://impulse.vvsk.in/" + b.link;
-    link = "https://impulse.vvsk.in/pdfviewer?url=" + link;
-    window.open(link, "_blank");
+    window.open(b.link, "_blank");
   }
 }
