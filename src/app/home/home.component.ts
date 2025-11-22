@@ -3,9 +3,10 @@ import { Utility } from '../app-utilt';
 import { ConfigService } from '../config.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.less']
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.less'],
+    standalone: false
 })
 export class HomeComponent {
   isMobile:boolean = Utility.mobileAndTabletCheck();

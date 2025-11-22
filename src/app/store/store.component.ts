@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-store',
-  templateUrl: './store.component.html',
-  styleUrls: ['./store.component.less']
+    selector: 'app-store',
+    templateUrl: './store.component.html',
+    styleUrls: ['./store.component.less'],
+    standalone: false
 })
 export class StoreComponent {
 

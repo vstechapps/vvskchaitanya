@@ -24,49 +24,40 @@ import { LibraryComponent } from './library/library.component';
 import { StoreComponent } from './store/store.component';
 import { ConnectComponent } from './connect/connect.component';
 import { BookComponent } from './book/book.component';
-import { Library1Component } from './library1/library1.component';
 import { ImpulseComponent } from './impulse/impulse.component';
 import { ImpulseCardComponent } from './impulse-card/impulse-card.component';
 import { GameComponent } from './game/game.component';
 import { ReposComponent } from './repos/repos.component';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    TechsComponent,
-    TypewriterComponent,
-    AboutComponent,
-    SkillsComponent,
-    ExperienceComponent,
-    HeaderComponent,
-    MenuComponent,
-    ThreedeComponent,
-    SimplifyComponent,
-    ProfileComponent,
-    AwardsComponent,
-    CarouselComponent,
-    Simplify2Component,
-    ProjectsComponent,
-    ResumeComponent,
-    LibraryComponent,
-    StoreComponent,
-    ConnectComponent,
-    BookComponent,
-    Library1Component,
-    ImpulseComponent,
-    ImpulseCardComponent,
-    GameComponent,
-    ReposComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    HttpClientModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        HomeComponent,
+        TechsComponent,
+        TypewriterComponent,
+        AboutComponent,
+        SkillsComponent,
+        ExperienceComponent,
+        HeaderComponent,
+        ThreedeComponent,
+        SimplifyComponent,
+        ProfileComponent,
+        AwardsComponent,
+        CarouselComponent,
+        Simplify2Component,
+        ProjectsComponent,
+        ResumeComponent,
+        LibraryComponent,
+        StoreComponent,
+        ConnectComponent,
+        BookComponent,
+        ImpulseComponent,
+        ImpulseCardComponent,
+        GameComponent,
+        ReposComponent
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        MenuComponent], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }

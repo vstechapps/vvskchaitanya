@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-book',
-  templateUrl: './book.component.html',
-  styleUrls: ['./book.component.less']
+    selector: 'app-book',
+    templateUrl: './book.component.html',
+    styleUrls: ['./book.component.less'],
+    standalone: false
 })
 export class BookComponent implements OnInit{
 

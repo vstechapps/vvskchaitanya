@@ -3,9 +3,10 @@ import { GithubService } from './github.service';
 import { ConfigService } from '../config.service';
 
 @Component({
-  selector: 'app-repos',
-  templateUrl: './repos.component.html',
-  styleUrls: ['./repos.component.less']
+    selector: 'app-repos',
+    templateUrl: './repos.component.html',
+    styleUrls: ['./repos.component.less'],
+    standalone: false
 })
 export class ReposComponent implements OnInit {
   repos: any[] = [];

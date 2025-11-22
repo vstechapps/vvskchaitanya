@@ -5,9 +5,10 @@ import { ViewportScroller } from '@angular/common';
 import { delay, filter } from 'rxjs';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.less']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.less'],
+    standalone: false
 })
 export class AppComponent {
   showPopup: boolean = false;

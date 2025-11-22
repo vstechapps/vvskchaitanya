@@ -2,9 +2,10 @@ import { Component, Sanitizer } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-awards',
-  templateUrl: './awards.component.html',
-  styleUrls: ['./awards.component.less']
+    selector: 'app-awards',
+    templateUrl: './awards.component.html',
+    styleUrls: ['./awards.component.less'],
+    standalone: false
 })
 export class AwardsComponent {
   awards:{name:string,link:string,l?:any,t?:string}[]=[

@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-domain',
-  templateUrl: './domain.component.html',
-  styleUrls: ['./domain.component.less']
+    selector: 'app-domain',
+    templateUrl: './domain.component.html',
+    styleUrls: ['./domain.component.less'],
+    standalone: false
 })
 export class DomainComponent {
 
