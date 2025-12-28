@@ -1,0 +1,42 @@
+@import '../../../styles.less';
+
+.section-card {
+    background: @card-bg;
+    border: 1px solid @card-border;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-header {
+        background: rgba(255, 255, 255, 0.03);
+        border-bottom: 1px solid @card-border;
+        color: @text-primary;
+        transition: background 0.2s;
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        .text-accent {
+            color: @accent-color;
+        }
+    }
+
+    .card-body {
+        transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+        max-height: 2000px; // Arbitrary large height
+        opacity: 1;
+        overflow: hidden;
+
+        &.hide {
+            max-height: 0;
+            opacity: 0;
+            border: none;
+        }
+    }
+}

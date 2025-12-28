@@ -1,0 +1,15 @@
+<div class="section-card mb-4" [id]="id">
+    <div class="card-header d-flex align-items-center justify-content-between p-3 pointer" (click)="toggle()">
+        <div class="d-flex align-items-center">
+            <i *ngIf="icon" [class]="icon + ' me-3 fs-4 text-accent'"></i>
+            <h5 class="mb-0 fw-bold text-uppercase letter-spacing-1">{{title}}</h5>
+        </div>
+        <i class="bi" [ngClass]="expanded ? 'bi-chevron-up' : 'bi-chevron-down'"></i>
+    </div>
+
+    <div class="card-body p-0" [ngClass]="{'show': expanded, 'hide': !expanded}">
+        <div class="content p-3">
+            <ng-content></ng-content>
+        </div>
+    </div>
+</div>

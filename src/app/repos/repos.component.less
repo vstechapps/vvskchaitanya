@@ -1,6 +1,34 @@
-.r{
-    color:white;
-    background-color: tomato;
-    font-size: 35px;
-    font-weight: 500;
+@import '../../styles.less';
+
+.repo-card {
+    background: @card-bg;
+    border: 1px solid @card-border;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        border-color: @accent-color;
+
+        i.bi-github {
+            color: @accent-color;
+        }
+
+        i.bi-box-arrow-up-right {
+            opacity: 1;
+            color: @accent-color;
+        }
+    }
+
+    .description-clamp {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    i.bi-github {
+        transition: color 0.3s;
+    }
 }

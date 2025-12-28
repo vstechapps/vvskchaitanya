@@ -1,22 +1,42 @@
-<div class="floating-chat">
-    <button *ngIf="!chat" class="chat-button" (click)="chat=true"><i class="material-icons text-light align-middle">forum</i></button>  
+<div class="row g-4">
+  <!-- Contact Cards -->
+  <div class="col-md-4" *ngFor="let c of contacts">
+    <a [href]="c.action" target="_blank" class="contact-card d-block text-center p-4 h-100 text-decoration-none">
+      <div class="icon-wrapper mb-3 mx-auto">
+        <i [class]="'bi ' + c.icon + ' fs-3'"></i>
+      </div>
+      <h6 class="fw-bold text-white mb-2">{{c.label}}</h6>
+      <p class="small text-secondary mb-0">{{c.value}}</p>
+    </a>
+  </div>
 </div>
-<div class="modal d-block" *ngIf="chat" tabindex="-1">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header text-center">
-          <span class="mx-2 fs-5">Live Chat</span>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="chat=false"></button>
+
+<!-- Chat Trigger -->
+<div class="mt-4 text-center">
+  <p class="text-secondary mb-3">Or chat with my AI Assistant (Demo)</p>
+  <button class="btn btn-outline-primary px-4 py-2" (click)="chat = true">
+    <i class="bi bi-chat-dots me-2"></i> Start Live Chat
+  </button>
+</div>
+
+<!-- Chat Modal -->
+<div class="modal fade show d-block" *ngIf="chat" tabindex="-1" style="background: rgba(0,0,0,0.8);">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-dark border-secondary">
+      <div class="modal-header border-secondary">
+        <h5 class="modal-title text-white"><i class="bi bi-robot me-2"></i>Assistant</h5>
+        <button type="button" class="btn-close btn-close-white" (click)="chat=false"></button>
+      </div>
+      <div class="modal-body">
+        <div class="chat-container p-3 rounded" style="background: #0f1115; height: 300px; overflow-y: auto;">
+          <div [innerHTML]="chatLog"></div>
         </div>
-        <div class="modal-body">
-            <div id="chat-container">
-                <div id="chat-log" [innerHTML]="chatLog"></div>
-                <div id="user-input">
-                    <input type="text" id="input-field" [(ngModel)]="input" placeholder="Hello World!!...">
-                    <button id="send-button" (click)="send()">Send</button>
-                </div>
-            </div>
+        <div class="input-group mt-3">
+          <input type="text" class="form-control bg-dark text-white border-secondary" [(ngModel)]="input"
+            (keyup.enter)="send()" placeholder="Type a message...">
+          <button class="btn btn-primary" (click)="send()">Send</button>
         </div>
       </div>
     </div>
-</div>  
+  </div>
+</div>

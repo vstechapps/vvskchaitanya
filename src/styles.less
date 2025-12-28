@@ -1,10 +1,67 @@
-/* You can add global styles to this file, and also import other style files */
-.pointer{
-    cursor:pointer;
+/* Professional Theme Variables */
+@primary-bg: #0f1115;
+@sidebar-bg: #161b22;
+@card-bg: #1c2128;
+@card-border: #30363d;
+@text-primary: #e6edf3;
+@text-secondary: #8b949e;
+@accent-color: #58a6ff; // Github-like blue, or use a brand color
+@success-color: #238636;
+
+/* Global Resets & Typography */
+body {
+    background-color: @primary-bg;
+    color: @text-primary;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
 
-iframe #document img{
-    width:200px;
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: @primary-bg;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3a3f4b;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4a4f5b;
+}
+
+/* Heading Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: @text-primary;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: @accent-color;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+/* You can add global styles to this file, and also import other style files */
+.pointer {
+    cursor: pointer;
+}
+
+iframe #document img {
+    width: 200px;
 
 }
 
@@ -33,9 +90,10 @@ iframe #document img{
     border-radius: 5px;
     margin-bottom: 10px;
     max-width: 10%;
-    width: auto; /* set width to auto */
+    width: auto;
+    /* set width to auto */
     clear: both;
-    word-break: break-word; 
+    word-break: break-word;
 }
 
 @media only screen and (max-width: 600px) {
@@ -44,12 +102,11 @@ iframe #document img{
         max-width: 50%;
         word-wrap: break-word;
     }
-    
+
     .bot-message {
         max-width: 80%;
         margin-right: 0;
         margin-left: auto;
     }
-    
-}
 
+}

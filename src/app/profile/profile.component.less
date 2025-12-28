@@ -1,29 +1,36 @@
-.r {
+@import '../../styles.less';
+
+.about-card {
+    background: linear-gradient(145deg, @card-bg, darken(@card-bg, 5%));
+    border: 1px solid @card-border;
+    border-radius: 16px;
+    position: relative;
     overflow: hidden;
-    position: relative;
-    height: 40px;
-    color: white;
-    background-color: cornflowerblue;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 150px;
+        height: 150px;
+        background: radial-gradient(circle, rgba(88, 166, 255, 0.1) 0%, transparent 70%);
+        border-radius: 50%;
+        pointer-events: none;
+    }
 }
-span {
-    font-family: Arial, sans-serif;
-    font-size: 25px;
-    display: inline-block;
-    font-weight: bold;
-    position: relative;
-    white-space: nowrap;
-    top:5px;
-    padding:0px;
-    width:-webkit-fill-available;
-    animation: move 7s;
-    animation-iteration-count: 5;
-    animation-delay: 1s;
-  }
-  
-  @keyframes move {
-  0%  { top: 5px; }
-  20% { top: -35px; }
-  40% { top: -75px; }
-  60% { top: -115px; }
-  80% { top: -150px;}
-  }
+
+.role-badge {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+
+    &:hover {
+        background: @accent-color;
+        color: @primary-bg;
+        border-color: @accent-color;
+    }
+}

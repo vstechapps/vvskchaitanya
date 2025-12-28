@@ -1,45 +1,20 @@
-<div class="c p-3 shadow bg-card m-3">
-    <div class="row d-flex justify-content-center">
-        <div class="col-3 d-flex align-items-center justify-content-center">
-            <div class="txl shadow"><span>3</span><span>De</span></div>
-        </div>
-        <div class="col-12 col-sm-6 col-md-4">
-            <div class="text-start a">
-                <span class="tl">De</span>
-                <span class="tm">sign</span>
+<div class="row g-4 mb-4">
+    <div class="col-md-4" *ngFor="let item of items">
+        <div class="philosophy-card text-center p-4">
+            <div class="icon-box mb-3 mx-auto">
+                <span class="display-4 fw-bold text-accent">{{item.prefix}}</span>
+                <span class="display-4 fw-bold">{{item.title}}</span>
             </div>
-            <div class="text-center a">
-                <span class="tl">De</span>
-                <span class="tm">velop</span>
-            </div>
-            <div class="text-end a">
-                <span class="tl">De</span>
-                <span class="tm">ploy</span>
-            </div>
+            <p class="text-secondary small">{{item.desc}}</p>
         </div>
     </div>
-    <div class="row">
-        <div class="col-12 text-center">
-            <button type="button" class="btn btn-primary btn-rounded waves-effect waves-light" 
-            onclick="window.location.href='https://fullstack.vvsk.in'">
-            GET STARTED 
-            <!-- <i _ngcontent-lns-c57="" class="material-icons align-middle mx-2 pointer float-end" tabindex="0" ng-reflect-router-link="ecm">open_in_new</i> -->
-            </button>
-            
-        </div>
-    </div>
-    <div class="row mt-2">
-        <div class="col-12 text-center">
-            <a href="https://linkedin.com/in/vvskchaitanya" target="_blank" class="btn btn-primary btn-sm btn-icon">
-                <i class="bi bi-linkedin"></i>
-            </a>
-            <a href="https://youtube.com/vvskchaitanya" target="_blank" class="btn btn-danger btn-sm btn-icon">
-                <i class="bi bi-youtube"></i>
-            </a>
-            <a href="https://github.com/vvskchaitanya" target="_blank" class="btn btn-dark btn-sm btn-icon">
-                <i class="bi bi-github"></i>
-            </a>
-            
-        </div>
-    </div>
+</div>
+
+<div class="cta-section text-center p-5 rounded-3 mb-4">
+    <h3 class="fw-bold mb-3">Ready to build something amazing?</h3>
+    <h5 class="fw-bold mb-3">Join Fullstack Accelerator Program</h5>
+    <button class="btn waves-effect waves-light px-5 py-3 rounded-pill fw-bold"
+        onclick="window.location.href='https://fullstack.vvsk.in'">
+        JOIN NOW <i class="bi bi-arrow-right ms-2"></i>
+    </button>
 </div>

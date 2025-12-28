@@ -3,18 +3,20 @@ import { Utility } from '../app-utilt';
 import { ConfigService } from '../config.service';
 
 @Component({
-    selector: 'app-home',
-    templateUrl: './home.component.html',
-    styleUrls: ['./home.component.less'],
-    standalone: false
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.less'],
+  standalone: false
 })
 export class HomeComponent {
-  isMobile:boolean = Utility.mobileAndTabletCheck();
-  menu: boolean = !this.isMobile;
+  isMobile: boolean = Utility.mobileAndTabletCheck();
+  sidebarOpen: boolean = false;
 
-  constructor(public config:ConfigService){
+  constructor(public config: ConfigService) {
 
   }
 
-
+  toggleSidebar() {
+    this.sidebarOpen = !this.sidebarOpen;
+  }
 }

@@ -1,93 +1,37 @@
-.txl{
-    font-weight: bolder;
-    font-size: 3rem;
-    color: darkgoldenrod;
-    padding: 5px;
-    border: 3px solid goldenrod;
-    border-radius: 10px;
-}
-.tl{
-    font-weight: bold;
-    font-size: 2rem;
-    color:red;
-}
-.tm{
-    font-weight: bold;
-    font-size: 2rem;
-    color: cadetblue;
-}
-.bg-card{
-    background:linear-gradient(45deg, cornsilk, white);
-}
+@import '../../styles.less';
 
-@keyframes spin {
-  from {transform: translate(-50%, -50%) rotate(0);}
-  to   {transform: translate(-50%, -50%) rotate(360deg);}
-}
-.a{
-    animation: fadeIn 4s;
-    animation-iteration-count: 7;
-    animation-direction: alternate;
-    transform-origin: 50% 50%;
-}
+.philosophy-card {
+  background: @card-bg;
+  border: 1px solid @card-border;
+  border-radius: 12px;
+  height: 100%;
+  transition: all 0.3s;
 
-@keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: scale(0.1);
-    }
-    50% {
-      transform: scale(1);
-    }
-    100% {
-        opacity: 1;
-    }
+  &:hover {
+    transform: translateY(-5px);
+    border-color: @accent-color;
   }
 
-  .btn {
-    /* display: inline-block; */
-    font-weight: 600;
-    text-align: center;
-    vertical-align: middle;
-    margin: 0.375rem;
-    text-transform: uppercase;
-    word-wrap: break-word;
-    white-space: normal;
-    border: 0;
-    line-height: 1.5;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
-    padding: 0.84rem 2.14rem;
+  .text-accent {
+    color: @accent-color;
+    opacity: 0.8;
+  }
 }
 
-.btn.btn-danger{
-  background-color: red!important;
-}
+.cta-section {
+  background: linear-gradient(45deg, darken(@card-bg, 3%), @card-bg);
+  border: 1px solid @card-border;
 
-.btn-icon{
-  padding: 5px;
-  font-size: 25px;
-}
+  h3 {
+    color: @text-primary;
+  }
 
-.fs-18{
-  font-size: 18px;
-}
-
-.waves-effect {
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  background: linear-gradient(45deg, black, transparent);
-}
-
-.waves-effect:hover{
-  opacity:0.8;
-}
-
-.btn-rounded {
-    border-radius: 10em;
-}
-.btn-primary {
-    color: #fff;
-    background-color: #4285f4 !important;
+  .waves-effect {
+    border: solid white 3px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background: linear-gradient(45deg, #4285f4, transparent);
+  }
 }

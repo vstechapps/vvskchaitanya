@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
+import { Utility } from '../app-utilt';
 
 @Component({
-    selector: 'app-header',
-    templateUrl: './header.component.html',
-    styleUrls: ['./header.component.less'],
-    standalone: false
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.less'],
+  standalone: false
 })
 export class HeaderComponent {
-  menu:boolean=false;
+  isMobile: boolean = Utility.mobileAndTabletCheck();
+  menu: boolean = false;
 }

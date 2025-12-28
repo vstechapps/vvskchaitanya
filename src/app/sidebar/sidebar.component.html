@@ -1,0 +1,64 @@
+<div class="sidebar-container d-flex flex-column h-100 p-3 position-relative">
+
+    <!-- Close Button (Mobile Only) -->
+    <div class="position-absolute top-0 end-0 p-3 d-md-none">
+        <button class="btn btn-link text-white p-0" (click)="onClose()">
+            <i class="bi bi-x-lg fs-4"></i>
+        </button>
+    </div>
+
+    <!-- Profile Header -->
+    <div class="profile-header text-center mb-4 mt-4 mt-md-0">
+        <div class="profile-img-container mx-auto mb-3">
+            <img src="assets/images/profile.jpg" alt="V.V.S.K Chaitanya" class="img-fluid rounded-circle profile-img"
+                onerror="this.src='assets/icons/vvsk-icon.png'">
+        </div>
+        <app-header></app-header>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav flex-column mb-auto">
+        <a class="nav-link" (click)="scrollTo('home')" href="javascript:void(0)">
+            <i class="bi bi-house-door me-2"></i> Home
+        </a>
+        <a class="nav-link" (click)="scrollTo('skills')" href="javascript:void(0)">
+            <i class="bi bi-cpu me-2"></i> Tech Stack
+        </a>
+        <a class="nav-link" (click)="scrollTo('experience')" href="javascript:void(0)">
+            <i class="bi bi-briefcase me-2"></i> Experience
+        </a>
+        <a class="nav-link" (click)="scrollTo('awards')" href="javascript:void(0)">
+            <i class="bi bi-trophy me-2"></i> Awards
+        </a>
+        <a class="nav-link" (click)="scrollTo('store')" href="javascript:void(0)">
+            <i class="bi bi-kanban me-2"></i> App Store
+        </a>
+        <a class="nav-link" (click)="scrollTo('connect')" href="javascript:void(0)">
+            <i class="bi bi-envelope me-2"></i> Connect
+        </a>
+    </nav>
+
+    <hr class="text-secondary">
+
+    <!-- Sub-domains -->
+    <div class="sub-domains mb-3">
+        <h6 class="text-uppercase text-secondary small fw-bold px-3">Products</h6>
+        <nav class="nav flex-column">
+            <a *ngFor="let link of subDomains" [href]="link.url" target="_blank" class="nav-link small">
+                <i [class]="link.icon + ' me-2'"></i> {{link.label}}
+            </a>
+        </nav>
+    </div>
+
+    <!-- Social Links -->
+    <div class="social-links d-flex justify-content-center gap-3 mt-3">
+        <a *ngFor="let link of socialLinks" [href]="link.url" target="_blank" class="text-secondary fs-5"
+            [title]="link.label">
+            <i [class]="link.icon"></i>
+        </a>
+    </div>
+
+    <div class="footer text-center mt-3">
+        <small class="text-muted" style="font-size: 0.7rem;">&copy; 2025 vvsk.in</small>
+    </div>
+</div>

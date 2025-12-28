@@ -1,12 +1,66 @@
-<app-header></app-header>
-<app-profile></app-profile>
-<app-threede></app-threede>
-<app-carousel></app-carousel>
-<app-repos></app-repos>
-<app-library></app-library>
-<app-skills></app-skills>
-<app-experience></app-experience>
-<app-awards></app-awards>
-<app-projects *ngIf="config.config.projects"></app-projects>
-<app-store></app-store>
-<app-connect></app-connect>
+<div class="layout-container">
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" *ngIf="isMobile && sidebarOpen" (click)="sidebarOpen = false"></div>
+
+    <!-- Sidebar Wrapper -->
+    <div class="sidebar-wrapper" [class.mobile-active]="sidebarOpen">
+        <app-sidebar (sectionSelected)="isMobile ? sidebarOpen = false : null"
+            (close)="sidebarOpen = false"></app-sidebar>
+    </div>
+
+    <!-- Mobile Header -->
+    <div class="mobile-header d-md-none">
+        <button class="btn-menu" (click)="toggleSidebar()">
+            <i class="bi bi-list"></i>
+        </button>
+        <app-header></app-header>
+        <div style="width: 24px;"></div> <!-- Spacer -->
+    </div>
+
+    <!-- Main Content -->
+    <div class="content-wrapper">
+
+        <!-- Home / Profile Section -->
+        <section id="home" class="mb-5">
+            <app-profile></app-profile>
+            <app-threede></app-threede>
+        </section>
+
+        <!-- Projects / Repos -->
+        <app-section-card title="Featured Repos" id="repos" icon="bi-github">
+            <app-repos></app-repos>
+        </app-section-card>
+
+        <!-- Skills -->
+        <app-section-card title="Tech Stack" id="skills" icon="bi-cpu">
+            <app-skills></app-skills>
+        </app-section-card>
+
+        <!-- Experience -->
+        <app-section-card title="Experience" id="experience" icon="bi-briefcase">
+            <app-experience></app-experience>
+        </app-section-card>
+
+        <!-- Awards -->
+        <app-section-card title="Awards" id="awards" icon="bi-trophy" [expanded]="false">
+            <app-awards></app-awards>
+        </app-section-card>
+
+        <!-- Projects -->
+        <app-section-card *ngIf="config.config.projects" title="Projects (Detailed)" id="projects" icon="bi-kanban">
+            <app-projects></app-projects>
+        </app-section-card>
+
+        <!-- Store -->
+        <app-section-card title="App Store" id="store" icon="bi-shop" [expanded]="false">
+            <app-store></app-store>
+        </app-section-card>
+
+        <!-- Connect -->
+        <app-section-card title="Connect" id="connect" icon="bi-envelope">
+            <app-connect></app-connect>
+        </app-section-card>
+
+    </div>
+</div>

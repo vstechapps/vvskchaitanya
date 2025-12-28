@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
     standalone: false
 })
 export class ThreedeComponent {
-
+    items = [
+        { prefix: 'De', title: 'sign', desc: 'Crafting intuitive and accessible user interfaces.' },
+        { prefix: 'De', title: 'velop', desc: 'Building robust and scalable backend systems.' },
+        { prefix: 'De', title: 'ploy', desc: 'Automating CI/CD pipelines for reliable delivery.' }
+    ];
 }

@@ -29,8 +29,11 @@ import { ImpulseCardComponent } from './impulse-card/impulse-card.component';
 import { GameComponent } from './game/game.component';
 import { ReposComponent } from './repos/repos.component';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { SectionCardComponent } from './shared/section-card/section-card.component';
 
-@NgModule({ declarations: [
+@NgModule({
+    declarations: [
         AppComponent,
         HomeComponent,
         TechsComponent,
@@ -54,10 +57,13 @@ import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http'
         ImpulseComponent,
         ImpulseCardComponent,
         GameComponent,
-        ReposComponent
+        ReposComponent,
+        SidebarComponent,
+        SectionCardComponent
     ],
     bootstrap: [AppComponent], imports: [BrowserModule,
         AppRoutingModule,
         FormsModule,
-        MenuComponent], providers: [provideHttpClient(withInterceptorsFromDi())] })
+        MenuComponent], providers: [provideHttpClient(withInterceptorsFromDi())]
+})
 export class AppModule { }

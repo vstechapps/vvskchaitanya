@@ -1,36 +1,44 @@
-/* Google Fonts */
-
+@import '../../styles.less';
 
 .line-1 {
   position: relative;
-  font-size: 20px;
+  font-size: 14px; // Smaller, more subtle for sidebar
   margin: 0 auto;
   border-right: 2px solid transparent;
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
+  font-family: 'Anonymous Pro', monospace;
+  color: @text-secondary;
 }
 
 /* Animation */
 .anim-typewriter1 {
   animation: typewriter1 4s steps(24) 0s 1 normal both,
-    blinkTextCursor 500ms steps(24) 0s 10 normal;
+    blinkTextCursor 500ms steps(44) infinite normal;
+  display: block; // Stack them
+}
+
+// Optimization: Hide others initially or delay them?
+// The current implementation attempts to reveal them sequentially using delays.
+// Let's refine the colors.
+
+.anim-typewriter1 {
+  animation: typewriter1 4s steps(24) 0s 1 normal both, blinkTextCursor 800ms steps(44) infinite normal;
 }
 
 .anim-typewriter2 {
-  animation: typewriter2 4s steps(24) 5s 1 normal both,
-    blinkTextCursor 500ms steps(24) 5s 10 normal;
+  animation: typewriter2 4s steps(24) 5s 1 normal both, blinkTextCursor 800ms steps(44) infinite normal;
 }
 
 .anim-typewriter3 {
-  animation: typewriter3 4s steps(24) 10s 1 normal both,
-    blinkTextCursor 500ms steps(24) 10s 10 normal;
+  animation: typewriter3 4s steps(24) 10s 1 normal both, blinkTextCursor 800ms steps(44) infinite normal;
 }
 
 .anim-typewriter4 {
-  animation: typewriter4 4s steps(24) 15s 1 normal both,
-    blinkTextCursor 500ms steps(24) 15s 10 normal;
+  animation: typewriter4 4s steps(24) 15s 1 normal both, blinkTextCursor 800ms steps(44) infinite normal;
 }
+
 
 @keyframes typewriter1 {
   from {
@@ -38,7 +46,7 @@
   }
 
   to {
-    width: 6em;
+    width: 11ch;
   }
 }
 
@@ -48,7 +56,7 @@
   }
 
   to {
-    width: 8em;
+    width: 15ch;
   }
 }
 
@@ -58,7 +66,7 @@
   }
 
   to {
-    width: 10em;
+    width: 19ch;
   }
 }
 
@@ -68,13 +76,13 @@
   }
 
   to {
-    width: 13em;
+    width: 24ch;
   }
 }
 
 @keyframes blinkTextCursor {
   from {
-    border-right-color: black;
+    border-right-color: @accent-color;
   }
 
   to {

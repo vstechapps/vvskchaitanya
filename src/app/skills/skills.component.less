@@ -1,23 +1,90 @@
-.r{
-    color:white;
-    background-color: tomato;
-    font-size: 35px;
-    font-weight: 500;
+@import '../../styles.less';
+
+.skill-category {
+    background: transparent;
+    padding: 0;
+    border: none;
+    margin-bottom: 2rem;
 }
 
-h4 {
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 30px;
-    padding: 10px;
-    color: #795548 !important;
-    font-size: 2.28rem;
+.category-title {
+    margin-bottom: 1.5rem;
+    padding-left: 0.5rem;
+    border-left: 3px solid @accent-color;
 }
 
-.col img.responsive-img {
-    margin: 0 auto;
-    max-height: 100px;
-    padding-bottom: 10px;
-    text-align: center;
-    vertical-align: middle;
-    display: table-cell;
+.skill-items-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    @media (max-width: 768px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        justify-items: center;
+    }
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    padding: 0.5rem;
+    width: 100px;
+    transition: transform 0.2s ease;
+    cursor: default;
+
+    &:hover {
+        transform: scale(1.1);
+
+        .skill-name {
+            color: @accent-color;
+        }
+
+        .skill-icon {
+            filter: drop-shadow(0 0 8px rgba(88, 166, 255, 0.4));
+        }
+    }
+
+    .skill-icon {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        margin-bottom: 0.75rem;
+        filter: grayscale(0.2);
+        transition: filter 0.3s, transform 0.3s;
+    }
+
+    .skill-name {
+        font-size: 0.85rem;
+        text-align: center;
+        color: @text-secondary;
+        font-weight: 500;
+        transition: color 0.3s;
+        line-height: 1.2;
+    }
+}
+
+@media (max-width: 768px) {
+    .skill-item {
+        width: 100%;
+        padding: 1rem 0.5rem;
+
+        .skill-icon {
+            width: 45px;
+            height: 45px;
+        }
+
+        .skill-name {
+            font-size: 0.8rem;
+        }
+    }
+}
+
+.spacing-2 {
+    letter-spacing: 2px;
 }
