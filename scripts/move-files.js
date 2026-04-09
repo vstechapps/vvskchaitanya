@@ -61,6 +61,14 @@ try {
         }
     }
 
+    // 4. Copy index.html to 404.html to support Github Pages SPA routing
+    const indexHtmlPath = path.join(destDir, 'index.html');
+    const notFoundHtmlPath = path.join(destDir, '404.html');
+    if (fs.existsSync(indexHtmlPath)) {
+        fs.copyFileSync(indexHtmlPath, notFoundHtmlPath);
+        console.log('Copied index.html to 404.html for SPA fallback routing.');
+    }
+
 } catch (err) {
     console.error('Error moving files:', err);
     process.exit(1);
