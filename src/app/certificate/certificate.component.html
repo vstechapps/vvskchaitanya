@@ -34,11 +34,14 @@
 
         <div class="col-md-6">
           <label class="form-label">Trainer Name</label>
-          <input type="text" class="form-control" [(ngModel)]="trainerName">
+          <input type="text" class="form-control mb-3" [(ngModel)]="trainerName">
+
+          <label class="form-label">Certificate Date</label>
+          <input type="date" class="form-control" [(ngModel)]="certificateDate">
         </div>
         <div class="col-md-6">
           <label class="form-label">Designations (One per line)</label>
-          <textarea class="form-control" rows="3" [(ngModel)]="designations" placeholder="Fullstack Trainer&#10;Lead Software Engineer"></textarea>
+          <textarea class="form-control" style="height: 114px;" [(ngModel)]="designations" placeholder="Fullstack Trainer&#10;Lead Software Engineer"></textarea>
         </div>
       </div>
       

@@ -26,6 +26,7 @@ export class CertificateComponent {
   signatureUrl: string = '/assets/images/vvsk-sign.png';
   trainerName: string = 'V.V.S.K Chaitanya';
   designations: string = 'Fullstack Trainer\nLead Software Engineer';
+  certificateDate: string = new Date().toISOString().split('T')[0];
 
   isGenerating = false;
   previewHtmlContent: SafeResourceUrl | null = null;
@@ -49,6 +50,14 @@ export class CertificateComponent {
       const signatureHtml = this.signatureUrl
         ? `<img src="${this.signatureUrl}" class="signature-image" alt="Signature">`
         : '';
+        
+      let displayDate = this.certificateDate;
+      if (this.certificateDate) {
+        const dateObj = new Date(this.certificateDate);
+        if (!isNaN(dateObj.getTime())) {
+          displayDate = dateObj.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
+        }
+      }
 
       return templateHtml
         .replace('{{studentName}}', this.studentName)
@@ -58,7 +67,8 @@ export class CertificateComponent {
         .replace('{{logoUrl}}', this.logoUrl)
         .replace('{{trainerName}}', this.trainerName)
         .replace('{{designationsHtml}}', designationsHtml)
-        .replace('{{signatureHtml}}', signatureHtml);
+        .replace('{{signatureHtml}}', signatureHtml)
+        .replace('{{certificateDate}}', displayDate);
     } catch (e) {
       console.error('Error fetching template', e);
       alert("Failed to fetch template.");
