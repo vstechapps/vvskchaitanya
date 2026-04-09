@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Internship Certificate</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #f4f6f9;
+            font-family: "Segoe UI", Tahoma, sans-serif;
+        }
+
+        .certificate-container {
+            width: 1123px;
+            /* A4 Landscape */
+            height: 794px;
+            background: white;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            box-sizing: border-box;
+        }
+
+        /* Border Design */
+        .certificate-container::before {
+            content: "";
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            border: 4px solid #1f4e79;
+        }
+
+        .certificate-container::after {
+            content: "";
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            right: 25px;
+            bottom: 25px;
+            border: 1.5px solid #c9a34e;
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .logo {
+            margin-top: 10px;
+        }
+
+        .logo img {
+            width: 180px;
+        }
+
+        .title {
+            font-size: 34px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: #1f4e79;
+            margin-top: 10px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .name {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 10px 0;
+            color: #000;
+        }
+
+        .description {
+            font-size: 18px;
+            line-height: 1.6;
+            width: 80%;
+            margin: 0 auto;
+            color: #333;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-top: 40px;
+            padding: 0 40px;
+        }
+
+        .company-id {
+            text-align: left;
+            font-size: 13px;
+            color: #4a5568;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .company-id strong {
+            color: #1f4e79;
+            font-size: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        .signature {
+            text-align: center;
+            margin-right: 40px;
+            position: relative;
+            color: #333;
+        }
+
+        .signature-image {
+            position: absolute;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            pointer-events: none;
+        }
+
+        .signature-line {
+            width: 220px;
+            border-top: 1px solid #000;
+            margin: 40px auto 10px;
+        }
+
+        .trainer {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="certificate-container">
+        <div class="content">
+
+            <!-- Logo -->
+            <div class="logo">
+                <img src="{{logoUrl}}" alt="Institute Logo">
+            </div>
+
+            <!-- Title -->
+            <div class="title">
+                INTERNSHIP COMPLETION CERTIFICATE
+            </div>
+
+            <!-- Content -->
+            <div>
+                <div class="subtitle">This is to certify that</div>
+
+                <div class="name">{{studentName}}</div>
+
+                <div class="description">
+                    has successfully completed the <b>{{courseName}}</b> program conducted by
+                    <b>{{institutionName}}</b> in association with
+                    <b>{{associationName}}</b>.<br><br>
+
+                    During this internship, the candidate has demonstrated strong dedication,
+                    technical skills, and a keen interest in fullstack development.<br><br>
+
+                    We wish them all the best in their future endeavors.
+                </div>
+            </div>
+
+            <!-- Footer (Company ID & Signature) -->
+            <div class="footer">
+                <div class="company-id">
+                    <strong>KE-STONE EDUTECH PRIVATE LIMITED</strong><br>
+                    CIN : U85490AP2024PTC114222<br>
+                    <strong>Registered Address:</strong><br>
+                    12-186, Prasadampadu Enikepadu,<br>
+                    Krishna, Andhra Pradesh, India 521108
+                </div>
+
+                <div class="signature">
+                    {{signatureHtml}}
+                    <div class="signature-line"></div>
+                    <div class="trainer">{{trainerName}}</div>
+                    {{designationsHtml}}
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

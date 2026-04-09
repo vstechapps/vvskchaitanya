@@ -11,7 +11,8 @@ const routes: Routes = [
   {path:"ecm",loadChildren: () => import('./modules/ecm/ecm.module').then(m => m.EcmModule)},
   {path:"bpm",loadChildren: () => import('./modules/bpm/bpm.module').then(m => m.BpmModule)},
   {path:"mdm",loadChildren: () => import('./modules/mdm/mdm.module').then(m => m.MdmModule)},
-  {path:"impulse",component:ImpulseComponent}
+  {path:"impulse",component:ImpulseComponent},
+  {path:"certificate", loadComponent: () => import('./certificate/certificate.component').then(m => m.CertificateComponent)}
 ];
 
 @NgModule({

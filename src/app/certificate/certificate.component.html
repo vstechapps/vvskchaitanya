@@ -1,0 +1,68 @@
+<div class="certificate-settings-container">
+  <div class="card bg-dark text-white shadow">
+    <div class="card-header bg-primary text-white fw-bold text-uppercase p-3">
+      Certificate Generator
+    </div>
+    <div class="card-body">
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label">Student Name</label>
+          <input type="text" class="form-control" [(ngModel)]="studentName" placeholder="E.g., V. Sai Likhith">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Course Name</label>
+          <input type="text" class="form-control" [(ngModel)]="courseName" placeholder="E.g., Python Fullstack Internship">
+        </div>
+        
+        <div class="col-md-6">
+          <label class="form-label">Institution Name</label>
+          <input type="text" class="form-control" [(ngModel)]="institutionName" placeholder="E.g., Keystone Edu Tech...">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Association Name</label>
+          <input type="text" class="form-control" [(ngModel)]="associationName" placeholder="E.g., CoC (Care of Careers)">
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Brand Logo URL</label>
+          <input type="text" class="form-control" [(ngModel)]="logoUrl">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Signature Image URL (Optional)</label>
+          <input type="text" class="form-control" [(ngModel)]="signatureUrl" placeholder="Provide full url of image">
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Trainer Name</label>
+          <input type="text" class="form-control" [(ngModel)]="trainerName">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Designations (One per line)</label>
+          <textarea class="form-control" rows="3" [(ngModel)]="designations" placeholder="Fullstack Trainer&#10;Lead Software Engineer"></textarea>
+        </div>
+      </div>
+      
+      <div class="mt-4 text-center d-flex justify-content-center gap-3">
+        <button class="btn btn-outline-info btn-lg px-4" (click)="previewCertificate()">
+          <i class="bi bi-eye me-2"></i>Preview Certificate
+        </button>
+        <button class="btn btn-warning btn-lg fw-bold px-4" (click)="generatePDF()" [disabled]="isGenerating">
+          <span *ngIf="isGenerating" class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+          {{ isGenerating ? 'Generating PDF...' : 'Download Certificate' }}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-4 text-muted text-center small">
+    <i class="bi bi-info-circle me-1"></i> The certificate dynamic HTML will be automatically scaled to A4 layout for print/download.
+  </div>
+
+  <!-- Preview Container -->
+  <div class="preview-container card bg-dark mt-4 shadow" *ngIf="previewHtmlContent">
+    <div class="card-header bg-secondary text-white fw-bold">Live HTML Preview</div>
+    <div class="card-body p-0">
+      <iframe [src]="previewHtmlContent" class="preview-iframe" title="Certificate Preview"></iframe>
+    </div>
+  </div>
+</div>
